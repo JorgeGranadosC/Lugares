@@ -7,12 +7,61 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/et_email"
+        android:layout_width="146dp"
+        android:layout_height="24dp"
+        android:background="#00FAFAFB"
+        android:text="Correo"
+        android:textColor="#1F1515"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="34dp" />
+
+    <TextView
+        android:id="@+id/et_Clave"
+        android:layout_width="143dp"
+        android:layout_height="22dp"
+        android:text="Contrasena"
+        app:layout_constraintTop_toBottomOf="@+id/et_emailinput"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <EditText
+        android:id="@+id/et_claveInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/et_Clave"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <EditText
+        android:id="@+id/et_emailinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        tools:layout_editor_absoluteX="81dp" />
+
+    <LinearLayout
+        android:layout_width="381dp"
+        android:layout_height="193dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/et_claveInput"
+        tools:layout_editor_absoluteX="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_registration" />
+
+        <ImageButton
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_login" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
